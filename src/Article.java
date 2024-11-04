@@ -12,6 +12,11 @@ public class Article extends ArticleComponent {
         components.remove(component);
     }
 
+    public ArticleIterator iterator()
+    {
+        return new ArticleIterator(this.components);
+    }
+
     @Override
     public void display() {
         System.out.println("Displaying Article:");
